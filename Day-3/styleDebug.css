@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -223,4 +224,22 @@ footer {
   .contact-box input {
     width: 100%;
   }
+}
+.testimonial-card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    height:100%;
+    text-align:center;
+}
+.price-card{
+    background:#fff;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+html{
+    scroll-behavior:smooth;
 }
