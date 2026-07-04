@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color:#e19ff5; /* Blue side background */
+    background-color:#e19ff5;
     display:flex;
     justify-content:center;
     padding:40px;
@@ -60,7 +60,7 @@ button{
     width:100%;
     padding:12px;
     margin-top:20px;
-    background-color:#e19ff5; /* Blue side background */
+    background-color:#e19ff5; 
     color:white;
     border:none;
     border-radius:5px;
@@ -68,6 +68,6 @@ button{
 }
 
 button:hover{
-    background-color:#ba86c9; /* Blue side background */
+    background-color:#ba86c9;
     
 }
