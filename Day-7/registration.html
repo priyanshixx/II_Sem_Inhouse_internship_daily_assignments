@@ -1,35 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        body{
+            background: #f5f7fb;
+        }
+
+        .card{
+            border:none;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-header{
+            background:#0d6efd;
+            color:white;
+            border-radius:15px 15px 0 0 !important;
+        }
+
+        .form-control{
+            border-radius:10px;
+        }
+
+        .btn-primary{
+            border-radius:10px;
+            padding:10px;
+            font-weight:600;
+        }
+    </style>
+
 </head>
 <body>
 
-    <h2>Student Registration Form</h2>
+<div class="container py-5">
 
-    <form action="registration.php" method="POST" enctype="multipart/form-data" class="form">
+    <div class="row justify-content-center">
 
-        <label>Upload Image:</label><br>
-        <input type="file" name="myfile" required><br><br>
+        <div class="col-lg-6 col-md-8">
 
-        <label>Name:</label><br>
-        <input type="text" name="name" required><br><br>
+            <div class="card">
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+                <div class="card-header text-center py-3">
+                    <h3><i class="bi bi-person-plus-fill"></i> Student Registration</h3>
+                </div>
 
-        <label>Branch:</label><br>
-        <input type="text" name="branch" required><br><br>
+                <div class="card-body p-4">
 
-        <label>CGPA:</label><br>
-        <input type="number" name="cgpa" required><br><br>
+                    <form action="registration.php" method="POST" enctype="multipart/form-data">
 
-        <label>Phone Number:</label><br>
-        <input type="tel" name="phone_no" required><br><br>
+                        <!-- Upload -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <i class="bi bi-image"></i> Upload Image
+                            </label>
+                            <input type="file" class="form-control" name="myfile" required>
+                        </div>
 
-        <input type="submit" value="Register">
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <i class="bi bi-person-fill"></i> Full Name
+                            </label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+                        </div>
 
-    </form>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <i class="bi bi-envelope-fill"></i> Email
+                            </label>
+                            <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required>
+                        </div>
+
+                        <!-- Branch -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <i class="bi bi-book-fill"></i> Branch
+                            </label>
+
+                            <select class="form-select" name="branch" required>
+                                <option value="">Choose Branch</option>
+                                <option>CSE</option>
+                                <option>IT</option>
+                                <option>ECE</option>
+                                <option>EEE</option>
+                                <option>Mechanical</option>
+                                <option>Civil</option>
+                            </select>
+
+                        </div>
+
+                        <!-- CGPA -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <i class="bi bi-award-fill"></i> CGPA
+                            </label>
+                            <input type="number"
+                                   class="form-control"
+                                   name="cgpa"
+                                   step="0.01"
+                                   min="0"
+                                   max="10"
+                                   placeholder="Enter CGPA"
+                                   required>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-4">
+                            <label class="form-label">
+                                <i class="bi bi-telephone-fill"></i> Phone Number
+                            </label>
+                            <input type="tel"
+                                   class="form-control"
+                                   name="phone_no"
+                                   placeholder="9876543210"
+                                   maxlength="10"
+                                   required>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-circle-fill"></i>
+                                Register Student
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
